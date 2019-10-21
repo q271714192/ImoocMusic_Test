@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activitys.LoginActivity">
+    tools:context=".activitys.RegisterActivity">
 
     <include layout="@layout/nav_bar" />
 
@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:src="@mipmap/logo"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/marginSize"
         android:contentDescription="LOGO" />
 
     <views.Inputview
@@ -22,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/inputViewHeight"
         app:input_icon="@mipmap/phone"
-        app:input_hint="手机号"
+        app:input_hint="请输入手机号"
         app:is_password="false"/>
 
     <View
@@ -33,25 +34,26 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/inputViewHeight"
         app:input_icon="@mipmap/password"
-        app:input_hint="密码"
+        app:input_hint="请输入密码"
         app:is_password="true"/>
 
     <View
         style="@style/line"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/marginSize"
-        android:text="立即注册"
-        android:layout_gravity="center_horizontal"
-        android:textSize="@dimen/infoSize"
-        android:textColor="@color/mainColor"
-        android:onClick="onRegisterClick"/>
+    <views.Inputview
+        android:id="@+id/input_password_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/inputViewHeight"
+        app:input_icon="@mipmap/password"
+        app:input_hint="请确认密码"
+        app:is_password="true"/>
+
+    <View
+        style="@style/line"/>
 
     <Button
         style="@style/commitBtn"
-        android:text="登  录"
+        android:text="注  册"
         android:layout_marginTop="@dimen/marginSize"
-        android:onClick="onCommitClick"/>
+        android:onClick="onRegisterClick"/>
 </LinearLayout>
