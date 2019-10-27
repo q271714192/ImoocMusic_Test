@@ -43,9 +43,9 @@ public class LoginActivity extends BaseActivity {
 //        获取用户输入的密码
         String password = mInputPassword.getInputStr();
 //验证用户输入是否合法
-        if(!UserUtils.validateLogin(this,phone,password)){
-            return;
-        }
+//        if(!UserUtils.validateLogin(this,phone,password)){
+//            return;
+//        }
 //跳转到主界面
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
